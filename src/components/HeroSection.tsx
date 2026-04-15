@@ -1,4 +1,5 @@
 import heroDevices from "@/assets/hero-devices.png";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -10,6 +11,7 @@ const HeroSection = () => {
       <div className="container relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
         {/* Text */}
         <div className="flex-1 text-center md:text-left animate-slide-up">
+          <img src={logo} alt="Hora do Filme" className="w-40 md:w-52 mb-6 mx-auto md:mx-0" />
           <h1 className="text-5xl md:text-7xl leading-[0.95] mb-6">
             CONTEÚDO DE QUALIDADE, COM{" "}
             <span className="bg-gradient-fire px-3 py-1 inline-block text-primary-foreground">
