@@ -19,7 +19,7 @@ const HeroSection = () => {
 
           <h1 className="text-3xl md:text-6xl leading-[1] mb-4">
             CONTEÚDO DE QUALIDADE, COM{" "}
-            <span className="bg-gradient-fire px-2 py-0.5 inline-block text-primary-foreground">
+            <span className="bg-gradient-fire px-3 py-1 inline-block text-primary-foreground rounded-md text-[0.85em]">
               UM PREÇO QUE CABE NO SEU BOLSO!
             </span>
           </h1>
