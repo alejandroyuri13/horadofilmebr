@@ -12,14 +12,13 @@ const HeroSection = () => {
         {/* Text */}
         <div className="flex-1 text-center md:text-left animate-slide-up">
           {/* Logo with radial fade blend */}
-          <div className="relative w-36 md:w-48 mx-auto md:mx-0 mb-5">
-            <div className="absolute inset-0 scale-150 bg-[radial-gradient(circle,hsl(var(--background))_10%,transparent_70%)]" />
-            <img src={logo} alt="Hora do Filme" className="relative w-full drop-shadow-2xl" />
+          <div className="relative w-36 md:w-48 mx-auto md:mx-0 mb-5" style={{ WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 72%)', maskImage: 'radial-gradient(circle, black 40%, transparent 72%)' }}>
+            <img src={logo} alt="Hora do Filme" className="w-full drop-shadow-2xl" />
           </div>
 
           <h1 className="text-3xl md:text-6xl leading-[1] mb-4">
             CONTEÚDO DE QUALIDADE, COM{" "}
-            <span className="bg-gradient-fire px-3 py-1 inline-block text-primary-foreground rounded-md text-[0.85em]">
+            <span className="bg-gradient-fire px-1.5 py-0.5 inline-block text-primary-foreground rounded text-[0.85em] leading-tight">
               UM PREÇO QUE CABE NO SEU BOLSO!
             </span>
           </h1>
