@@ -3,9 +3,9 @@ import { Check, Star, Zap, Crown } from "lucide-react";
 const plans = [
   {
     name: "1 MÊS",
-    price: "9,90",
+    price: "9,99",
     oldPrice: "19,90",
-    perMonth: "9,90",
+    perMonth: "9,99",
     discount: "50% OFF",
     link: "https://pay.cakto.com.br/3ad4zv9",
     popular: false,
@@ -13,7 +13,7 @@ const plans = [
   },
   {
     name: "6 MESES",
-    price: "27,90",
+    price: "29,99",
     oldPrice: "59,40",
     perMonth: "4,65",
     discount: "53% OFF",
@@ -23,9 +23,9 @@ const plans = [
   },
   {
     name: "3 MESES",
-    price: "18,90",
+    price: "19,99",
     oldPrice: "29,70",
-    perMonth: "6,30",
+    perMonth: "7,30",
     discount: "36% OFF",
     link: "https://pay.cakto.com.br/3vz6c7n",
     popular: false,
