@@ -31,6 +31,16 @@ const plans = [
     popular: false,
     icon: Star,
   },
+  {
+    name: "1 ANO",
+    price: "49,90",
+    oldPrice: "118,80",
+    perMonth: "4,16",
+    discount: "58% OFF",
+    link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
+    popular: false,
+    icon: Crown,
+  },
 ];
 
 const benefits = [
