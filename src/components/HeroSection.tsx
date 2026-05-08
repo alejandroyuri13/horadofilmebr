@@ -29,7 +29,7 @@ const HeroSection = () => {
             href="#planos"
             className="inline-block bg-gradient-fire text-primary-foreground font-bold text-base px-10 py-4 rounded-lg shadow-fire-lg hover:scale-105 transition-transform duration-200 uppercase tracking-wide"
           >
-            Quero assinar agora!
+            Quero assistir agora!
           </a>
         </div>
 

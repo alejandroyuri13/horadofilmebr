@@ -31,6 +31,16 @@ const plans = [
     popular: false,
     icon: Star,
   },
+  {
+    name: "1 ANO",
+    price: "49,90",
+    oldPrice: "118,80",
+    perMonth: "4,16",
+    discount: "58% OFF",
+    link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
+    popular: false,
+    icon: Crown,
+  },
 ];
 
 const benefits = [
@@ -62,7 +72,7 @@ const PricingSection = () => (
         Todos os planos incluem acesso completo. Escolha o que melhor se encaixa pra você.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto items-end">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 max-w-6xl mx-auto items-end">
         {plans.map((plan) => {
           const Icon = plan.icon;
           return (
