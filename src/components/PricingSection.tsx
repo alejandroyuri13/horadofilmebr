@@ -72,7 +72,7 @@ const PricingSection = () => (
         Todos os planos incluem acesso completo. Escolha o que melhor se encaixa pra você.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto items-end">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 max-w-6xl mx-auto items-end">
         {plans.map((plan) => {
           const Icon = plan.icon;
           return (
