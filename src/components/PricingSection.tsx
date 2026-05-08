@@ -39,6 +39,7 @@ const plans = [
     discount: "58% OFF",
     link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
     popular: false,
+    light: true,
     icon: Crown,
   },
 ];
@@ -81,6 +82,8 @@ const PricingSection = () => (
               className={`relative rounded-2xl flex flex-col transition-all duration-300 ${
                 plan.popular
                   ? "border-2 border-primary bg-card shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
+                  : plan.light
+                  ? "border border-white/20 bg-white text-neutral-900 shadow-xl hover:shadow-2xl"
                   : "border border-border bg-card/80 hover:border-primary/40"
               }`}
             >
@@ -93,43 +96,43 @@ const PricingSection = () => (
               {/* Header */}
               <div className={`p-6 pb-4 text-center ${plan.popular ? "pt-8" : "pt-6"}`}>
                 <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 ${
-                  plan.popular ? "bg-gradient-fire" : "bg-secondary"
+                  plan.popular ? "bg-gradient-fire" : plan.light ? "bg-neutral-900" : "bg-secondary"
                 }`}>
-                  <Icon className={`w-5 h-5 ${plan.popular ? "text-primary-foreground" : "text-muted-foreground"}`} />
+                  <Icon className={`w-5 h-5 ${plan.popular ? "text-primary-foreground" : plan.light ? "text-white" : "text-muted-foreground"}`} />
                 </div>
-                <h3 className="text-2xl md:text-3xl text-foreground mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <h3 className={`text-2xl md:text-3xl mb-1 ${plan.light ? "text-neutral-900" : "text-foreground"}`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   PLANO {plan.name}
                 </h3>
-                <div className="inline-block bg-highlight/15 text-highlight text-[11px] font-bold px-3 py-0.5 rounded-full">
+                <div className={`inline-block text-[11px] font-bold px-3 py-0.5 rounded-full ${plan.light ? "bg-neutral-900 text-white" : "bg-highlight/15 text-highlight"}`}>
                   {plan.discount}
                 </div>
               </div>
 
               {/* Price */}
               <div className="px-6 text-center mb-1">
-                <p className="text-muted-foreground text-xs mb-1">
+                <p className={`text-xs mb-1 ${plan.light ? "text-neutral-500" : "text-muted-foreground"}`}>
                   De <span className="line-through">R$ {plan.oldPrice}</span> por:
                 </p>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-muted-foreground text-lg">R$</span>
-                  <span className={`text-5xl md:text-6xl font-bold ${plan.popular ? "text-gradient-fire" : "text-foreground"}`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  <span className={`text-lg ${plan.light ? "text-neutral-500" : "text-muted-foreground"}`}>R$</span>
+                  <span className={`text-5xl md:text-6xl font-bold ${plan.popular ? "text-gradient-fire" : plan.light ? "text-neutral-900" : "text-foreground"}`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                     {plan.price}
                   </span>
                 </div>
-                <p className="text-muted-foreground text-[11px] mt-0.5">
-                  equivale a <strong className="text-foreground">R$ {plan.perMonth}/mês</strong>
+                <p className={`text-[11px] mt-0.5 ${plan.light ? "text-neutral-500" : "text-muted-foreground"}`}>
+                  equivale a <strong className={plan.light ? "text-neutral-900" : "text-foreground"}>R$ {plan.perMonth}/mês</strong>
                 </p>
               </div>
 
               {/* Divider */}
-              <div className="mx-6 my-4 h-px bg-border" />
+              <div className={`mx-6 my-4 h-px ${plan.light ? "bg-neutral-200" : "bg-border"}`} />
 
               {/* Benefits */}
               <div className="px-6 pb-2 flex-1">
                 <ul className="space-y-2.5">
                   {benefits.map((b) => (
-                    <li key={b} className="flex items-start gap-2.5 text-[13px] text-muted-foreground">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${plan.popular ? "text-primary" : "text-muted-foreground/60"}`} />
+                    <li key={b} className={`flex items-start gap-2.5 text-[13px] ${plan.light ? "text-neutral-700" : "text-muted-foreground"}`}>
+                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${plan.popular ? "text-primary" : plan.light ? "text-neutral-900" : "text-muted-foreground/60"}`} />
                       <span>{b}</span>
                     </li>
                   ))}
@@ -145,6 +148,8 @@ const PricingSection = () => (
                   className={`block w-full text-center font-bold text-sm py-3.5 rounded-xl uppercase tracking-wide transition-all duration-200 ${
                     plan.popular
                       ? "bg-gradient-fire text-primary-foreground shadow-fire hover:scale-[1.03] hover:shadow-fire-lg"
+                      : plan.light
+                      ? "bg-neutral-900 text-white hover:bg-neutral-800 hover:scale-[1.02]"
                       : "bg-secondary text-foreground border border-border hover:border-primary/50 hover:bg-secondary/80"
                   }`}
                 >
