@@ -12,13 +12,23 @@ const plans = [
     icon: Zap,
   },
   {
+    name: "1 ANO",
+    price: "49,90",
+    oldPrice: "118,80",
+    perMonth: "4,16",
+    discount: "58% OFF",
+    link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
+    popular: true,
+    icon: Crown,
+  },
+  {
     name: "6 MESES",
     price: "29,90",
     oldPrice: "59,40",
     perMonth: "4,65",
     discount: "53% OFF",
     link: "https://pay.kirvano.com/bfa2a18c-726a-4acf-88ae-f982a0977c35",
-    popular: true,
+    popular: false,
     icon: Crown,
   },
   {
@@ -30,17 +40,6 @@ const plans = [
     link: "https://pay.kirvano.com/7ffeddb4-244d-4bf9-a185-7504df9fa270",
     popular: false,
     icon: Star,
-  },
-  {
-    name: "1 ANO",
-    price: "49,90",
-    oldPrice: "118,80",
-    perMonth: "4,16",
-    discount: "58% OFF",
-    link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
-    popular: false,
-    light: true,
-    icon: Crown,
   },
 ];
 
