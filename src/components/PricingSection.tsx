@@ -29,6 +29,7 @@ const plans: Array<{
     discount: "58% OFF",
     link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
     popular: true,
+    light: true,
     icon: Crown,
   },
   {
@@ -90,7 +91,9 @@ const PricingSection = () => (
               key={plan.name}
               className={`relative rounded-2xl flex flex-col transition-all duration-300 ${
                 plan.popular
-                  ? "border-2 border-primary bg-card shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
+                  ? plan.light
+                    ? "border-2 border-primary bg-white text-neutral-900 shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
+                    : "border-2 border-primary bg-card shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
                   : plan.light
                   ? "border border-white/20 bg-white text-neutral-900 shadow-xl hover:shadow-2xl"
                   : "border border-border bg-card/80 hover:border-primary/40"
@@ -162,7 +165,7 @@ const PricingSection = () => (
                       : "bg-secondary text-foreground border border-border hover:border-primary/50 hover:bg-secondary/80"
                   }`}
                 >
-                  {plan.popular ? "🔥 Quero esse plano!" : "Assinar agora"}
+                  {plan.popular ? "🔥 Quero assistir agora!" : "Quero assistir agora!"}
                 </a>
                 {plan.popular && (
                   <p className="text-center text-[11px] text-muted-foreground mt-2">
