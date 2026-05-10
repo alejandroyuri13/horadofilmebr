@@ -162,7 +162,7 @@ const PricingSection = () => (
                       : "bg-secondary text-foreground border border-border hover:border-primary/50 hover:bg-secondary/80"
                   }`}
                 >
-                  {plan.popular ? "🔥 Quero esse plano!" : "Assinar agora"}
+                  {plan.popular ? "🔥 Quero assistir agora!" : "Quero assistir agora!"}
                 </a>
                 {plan.popular && (
                   <p className="text-center text-[11px] text-muted-foreground mt-2">
