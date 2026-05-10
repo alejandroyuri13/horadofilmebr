@@ -1,6 +1,16 @@
 import { Check, Star, Zap, Crown } from "lucide-react";
 
-const plans = [
+const plans: Array<{
+  name: string;
+  price: string;
+  oldPrice: string;
+  perMonth: string;
+  discount: string;
+  link: string;
+  popular: boolean;
+  light?: boolean;
+  icon: typeof Zap;
+}> = [
   {
     name: "1 MÊS",
     price: "9,90",
