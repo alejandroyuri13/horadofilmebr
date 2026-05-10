@@ -29,6 +29,7 @@ const plans: Array<{
     discount: "58% OFF",
     link: "https://pay.kirvano.com/dd71caaa-6a0f-4066-91a7-72fb4e4bd510",
     popular: true,
+    light: true,
     icon: Crown,
   },
   {
