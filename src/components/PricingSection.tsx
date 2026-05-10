@@ -91,7 +91,9 @@ const PricingSection = () => (
               key={plan.name}
               className={`relative rounded-2xl flex flex-col transition-all duration-300 ${
                 plan.popular
-                  ? "border-2 border-primary bg-card shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
+                  ? plan.light
+                    ? "border-2 border-primary bg-white text-neutral-900 shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
+                    : "border-2 border-primary bg-card shadow-fire-lg md:scale-[1.06] z-10 md:-my-4"
                   : plan.light
                   ? "border border-white/20 bg-white text-neutral-900 shadow-xl hover:shadow-2xl"
                   : "border border-border bg-card/80 hover:border-primary/40"
